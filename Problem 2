@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+int main() {
+	int fone=1;
+	int ftwo=2;
+	int fthree;
+	vector<int>answers;
+	while(fthree<4000000){
+		fthree=fone+ftwo;
+		fone=ftwo;
+		ftwo=fthree;
+		if(fthree%2==0){
+		answers.push_back(fthree);
+		}
+	}
+	int i;
+	int answer;
+	for(i=0;i<answers.size();++i){
+		answer+=answers[i];
+	}
+	cout<<answer<<'\n';
+ 
+	return 0;
+}
